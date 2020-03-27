@@ -1,0 +1,195 @@
+Tuple is Immutable
+List dictionaries are mutable
+Range:(starting point,ending point,increment value)
+-->range(0,15,2)//print values upto ending point-1
+range(n)/by default starts form 0 and ends at n-1 increment value is 1
+-->list declaration
+list=[]
+-->to take input more than one variable in the same line
+-->a,b=input().split()
+-->to append the items in the list
+-->l.append()
+-->x=l[a:b]//extracting elements from a alarge list l to x
+-->Dictionary
+always stores the value in key,value pair
+d=dict()
+
+Everything in Python is an object . You have to understand that Python represents all its data as objects. An object’s mutability is determined by its type. Some of these objects like lists and dictionaries are mutable , meaning you can change their content without changing their identity. Other objects like integers, floats, strings and tuples are objects that can not be changed.
+
+-->Array
+import array module
+import array as arr
+declare a float type array
+a=arr.array('f',[9.9,8.8,7.7])//d for double i for integer
+array methods
+append()//add an elements
+clear()//removes all the elements
+copy()returns a copy of the list
+count()//count the number of elements with the specific value
+extend()//add the elements of a list in the end of the list
+index()//return the index of the first element
+
+-->python module
+import calculation
+import calculatio as cc(cc is alias)
+from calculation import summation
+calculation
+-summation
+-multiplication
+-divide
+
+-->random module
+import random
+random.random() always gives a number in the range between 0 and 1
+random.randint(0,5)gives an int from the given range
+random.randrange(0,101,5)
+random.choice(list_name)
+--->statistics module
+median()
+mode()
+stdev()//it takes list as argument
+
+-->function arguments
+1.Required arguments
+2.keyword arguments:func_name(arg=val1,arg=v2,...,argn=valn)//order may change with respect to definition of the function(if we change the name of the variable in either portion called or calling then error will occur(unexpected keyword argument))
+3.default arguments:return type fun-name(arg=val,arg,arg=val)//call a function wihtout specifing a value.Dfualt value will be taken if no value is passed .
+4.Voqiable arguments:
+display any number of arguments
+func_name(*arg_name):
+for i in arg_name:
+print(i)
+//define an empty function
+def fun_name():
+	pass
+pass is the keyword .
+
+-----Recursion-----
+
+-----lambda function------
+normal function:
+def fun_name(arg):
+return value
+lambda function:
+lambda arg : expression
+eg:var_name=lambda x:x*x
+print(var_name(x))
+-----filter function------
+filter method along with lambda function is used in certain condition where we need to filter values from a list with respect to some condition(prime odd etc)
+the logic behind the condition is defined through lambda and filter do the rest of the job
+-----map function-------
+to calculate another list from given list with respect to some condition then map function is used
+-----class and object------
+class cls_nm:
+def __init__(self,name,id):#constructor self is the keyword which maps on the current object
+	self.name=name
+	self.id=id
+def display():
+	print(self.name)
+	print(self.id)
+-->object creation
+p1=cls_nm(arg1,arg2)
+p1.display()
+#in the class all the variables are public
+#to make variables private in python:
+"self.__var_name" here "__" is used to make variables private
+default constructor
+def __init__(self):
+#logic
+count the number of objects:
+--?declare the class variable before the constructor inside the class and then count in the constructor using class_name.var_name+=1
+in built functions in class
+__getattr__()
+__setattr__()
+------iNHERITANCE--------
+BASE CLASS:
+DERIVEED CLASS:ALWAYS CREATE AN OBJECT FOR THE DERIVED CLASS
+types of inheritance:
+1.
+2.
+3.
+4.
+method overriding
+operator overloading
+exception handling:
+try:
+
+.
+.
+.
+.
+
+except error_name:
+.
+.
+.
+.
+Numpy
+.
+.
+.
+.
+Trick questions in Python
+print("xyyzxyzxzxyy".count('yy',1))
+ans:2(1 is not starting position)
+print("hello {0} and {1}".format('foo','bin'))
+ans:hello foo and bin
+print('{:,}'.format(1112223334))
+ans:1,112,223,334
+print('{:#}'.format(1112223334))
+ans:1112223334
+print('ab'.isalpha())
+ans:true
+print('a b'.isalpha())
+ans:false
+print('a@ 1'.islower())
+ans:true
+print('B! 1'.isupper())
+ans:True
+list1.pop(1)
+ans:remove 1st(not 0th) element from list1
+list1.insert(3,5)
+ans:insert element 5 in the 3rd position
+list1.pop()
+ans:remove the last element from the list
+list("a#b#c#d".split("#"))
+t=(1,2,3,4)
+t[1:-1]
+ans:(2,3)
+#slicing in tuples
+#sets
+#scenarios:
+1.Mr amir is a customer of SBI .He maintains a savings account and the balance in his account is 20000.Minimum balance to be maintained in the bank is 8000.Using Python code perform operations such as:
+a. Amount deposited by him is 17000
+b. Withdrawal done by him for Rupees 12000
+c. A fund transfer to his friend for an amount of 6000
+d. he has taken a loan from the bank to the tune of Rupees 8000
+e. calculate the interest earned by him which is at the rate of 5% on the net balance.
+Also include the interest on loan at the rate of 5%.
+
+#Modules And Packages
+-------------------------------------------------------------------------
+Package for excel files
+
+to install excel packages
+-->pip install openpyxl
+ write your modules and packages
+folder=package
+file inside the folder=module
+function inside the file=method
+first import the package then the neccessary module
+call method:module_name.method_name()
+
+an often confusing part of Python is a mysterious line of code:
+----------------------------------------------------------------------------
+	if __name__=="__main__":
+-->sometime when you are importing from a module, you would like to know whether a module's function is being used as an import, or if you are using the original.py file of that module.
+---------------------------------------------------------
+#error and exception handling
+-------------------------------------------------------------------
+1.TypeError
+try:
+#logic
+except:
+#print error
+else:
+#print result
